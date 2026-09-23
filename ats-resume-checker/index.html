@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ATS Resume Checker - analyze a resume against a job description."><title>ATS Resume Checker</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.8.0/mammoth.browser.min.js"></script></head>
+<body>
+<header class="topbar"><div class="brand"><span class="mark">✓</span> ATS Resume Checker</div><span class="badge">Free • Client-side</span></header>
+<main class="container">
+<section class="hero"><p class="eyebrow">CAREER TOOLKIT</p><h1>Make your resume easier for ATS systems to understand.</h1>
+<p>Upload a resume or paste its text, add a target job description, and get a transparent ATS-style score with keyword matching, section checks and actionable suggestions.</p></section>
+<section class="grid">
+<article class="card"><div class="head"><div><h2>1. Resume</h2><p>PDF, DOCX, TXT or pasted text</p></div></div>
+<label class="dropzone" id="dropzone"><input id="fileInput" type="file" accept=".pdf,.docx,.txt"><span class="upload">↑</span><strong>Drop your resume here</strong><small>or click to browse</small></label>
+<div id="fileName" class="filename">No file selected</div><textarea id="resumeText" placeholder="Or paste your complete resume text here..."></textarea></article>
+<article class="card"><div class="head"><div><h2>2. Job Description</h2><p>Paste the role you are targeting</p></div></div>
+<textarea id="jobText" class="job" placeholder="Paste the job description here. Skills, tools and requirements will be extracted automatically."></textarea>
+<div class="quick"><button data-job="software">Software</button><button data-job="data">Data / AI</button><button data-job="web">Full Stack</button></div></article>
+</section>
+<button class="analyze" id="analyzeBtn">Analyze Resume <span>→</span></button>
+<section id="results" class="results hidden">
+<div class="card scorecard"><div><p class="eyebrow">ATS SCORE</p><div class="scoreline"><span id="score">0</span><small>/100</small></div><p id="scoreLabel">Ready to analyze</p></div><div class="ring" id="scoreRing"><span id="ringValue">0%</span></div></div>
+<div class="stats"><div class="card stat"><span>Keywords matched</span><strong id="keywordStat">0%</strong></div><div class="card stat"><span>Sections detected</span><strong id="sectionStat">0/7</strong></div><div class="card stat"><span>Contact checks</span><strong id="contactStat">0/4</strong></div><div class="card stat"><span>Word count</span><strong id="wordStat">0</strong></div></div>
+<div class="resultgrid">
+<article class="card"><div class="title"><h2>Keyword Match</h2><span id="keywordCount">0 matched</span></div><div id="keywordList" class="keywords"></div></article>
+<article class="card"><div class="title"><h2>Resume Structure</h2><span id="structureLabel">—</span></div><div id="structureList" class="checks"></div></article>
+<article class="card full"><div class="title"><h2>Actionable Improvements</h2><span id="issueCount">0 items</span></div><div id="issues" class="issues"></div></article></div>
+<div class="card"><div class="title"><h2>Extracted Resume Text</h2><button id="copyBtn" class="ghost">Copy</button></div><pre id="extractedText"></pre></div>
+</section>
+<div class="privacy"><strong>Privacy first.</strong> Analysis runs in your browser; your resume is not sent to a server.</div>
+</main><footer>ATS Resume Checker • HTML • CSS • JavaScript</footer><script src="app.js"></script></body></html>
