@@ -1,25 +1,37 @@
 # ATS Resume Checker
 
-A free, browser-based resume checker that gives an ATS-style score and practical optimization feedback.
+A free, public, browser-based ATS Resume Checker for students, job seekers, and professionals.
 
-## Features
-- PDF, DOCX and TXT resume upload
-- Paste resume text directly
-- Job-description keyword matching
-- Resume section detection
-- Email, phone, LinkedIn and GitHub checks
-- Resume length and action-verb checks
-- ATS-unfriendly personal-detail warning
-- Actionable improvement report
-- No backend or API key required
+## What users can do
+- Upload a PDF, DOCX, or TXT resume
+- Paste resume text
+- Paste a target job description
+- Get an ATS-style score out of 100
+- Check job-description keyword matching
+- Check important resume sections
+- Check email, phone, LinkedIn, and GitHub
+- Check resume length and action verbs
+- Detect common ATS-unfriendly personal details
+- Get practical improvement suggestions
+- Copy the extracted resume text
 
-## Run
-Open `index.html` in a browser or serve the folder with a static web server.
+## Privacy
+Resume analysis runs in the browser. The project does not require a backend, login, database, or API key.
 
 ## GitHub Pages
-The project is static and can be deployed with GitHub Pages.
+After enabling GitHub Pages for the `main` branch and repository root, the checker is available inside this repository at:
 
-## Tech
-HTML5, CSS3, Vanilla JavaScript, PDF.js and Mammoth.js.
+https://praveenkumare1.github.io/resume/ats-resume-checker/
 
-The score is a heuristic ATS-style indicator, not a guarantee of how a specific employer's ATS will score a resume.
+## Important
+The score is a heuristic ATS-style indicator. Different employers and ATS platforms use different parsing and ranking rules, so the score is not a guarantee of an employer's ATS result.
+
+## Technology
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- PDF.js
+- Mammoth.js
+
+## Local use
+Open `index.html` in a modern browser, or serve the `ats-resume-checker` folder with any static web server.
