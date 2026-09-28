@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Creator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Resume Creator</h1>
+      <p>Create a clean, professional resume in minutes.</p>
+    </div>
+    <div class="actions">
+      <button id="saveBtn" class="secondary">Save</button>
+      <button id="clearBtn" class="secondary">Clear</button>
+      <button id="printBtn" class="primary">Download / Print PDF</button>
+    </div>
+  </header>
+
+  <main class="app">
+    <section class="panel editor">
+      <h2>Resume Details</h2>
+
+      <div class="section">
+        <h3>Personal Information</h3>
+        <div class="grid">
+          <label>Full Name<input id="name" placeholder="Your Name"></label>
+          <label>Professional Title<input id="title" placeholder="AI & Data Science Student"></label>
+          <label>Email<input id="email" type="email" placeholder="you@example.com"></label>
+          <label>Phone<input id="phone" placeholder="+91 98765 43210"></label>
+          <label>Location<input id="location" placeholder="Coimbatore, Tamil Nadu"></label>
+          <label>LinkedIn<input id="linkedin" placeholder="linkedin.com/in/yourname"></label>
+          <label>GitHub<input id="github" placeholder="github.com/yourname"></label>
+          <label>Portfolio<input id="portfolio" placeholder="yourportfolio.com"></label>
+        </div>
+        <label>Professional Summary<textarea id="summary" rows="4" placeholder="Write a short 2–4 line professional summary..."></textarea></label>
+      </div>
+
+      <div class="section">
+        <h3>Education</h3>
+        <div id="educationList"></div>
+        <button class="add" data-add="education">+ Add Education</button>
+      </div>
+
+      <div class="section">
+        <h3>Skills</h3>
+        <label>Technical Skills<input id="skills" placeholder="Python, Java, SQL, HTML, CSS, JavaScript"></label>
+        <label>Tools & Technologies<input id="tools" placeholder="GitHub, VS Code, Jupyter, MongoDB"></label>
+      </div>
+
+      <div class="section">
+        <h3>Projects</h3>
+        <div id="projectList"></div>
+        <button class="add" data-add="project">+ Add Project</button>
+      </div>
+
+      <div class="section">
+        <h3>Experience / Internship</h3>
+        <div id="experienceList"></div>
+        <button class="add" data-add="experience">+ Add Experience</button>
+      </div>
+
+      <div class="section">
+        <h3>Certifications</h3>
+        <div id="certificationList"></div>
+        <button class="add" data-add="certification">+ Add Certification</button>
+      </div>
+
+      <div class="section">
+        <h3>Achievements & Activities</h3>
+        <textarea id="achievements" rows="5" placeholder="One achievement or activity per line"></textarea>
+      </div>
+    </section>
+
+    <section class="panel preview-wrap">
+      <div class="preview-head">
+        <h2>Live Preview</h2>
+        <span id="status">Ready</span>
+      </div>
+      <article id="resumePreview" class="resume"></article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
